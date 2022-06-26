@@ -1,26 +1,51 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import {Greet} from "./components/Greet";
+import {Person} from "./components/Person";
+import {PersonList} from "./components/PersonList";
+import {Status} from "./components/Status";
+import {Heading} from "./components/Heading";
+import {Oscar} from "./components/Oscar";
+
+type NameListTypes = {
+    first: string,
+    last: string
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const personName = {
+        first: 'Bruce',
+        last: 'Wayne'
+    }
+
+    const nameList: NameListTypes[] = [
+        {
+            first: 'Bruce',
+            last: 'Wayne'
+        },
+        {
+            first: 'Clark',
+            last: 'Kent'
+        },
+        {
+            first: 'Princess',
+            last: 'Diana'
+        }
+    ]
+
+    return (
+        <div className="App">
+            <Status status={"loading"}/>
+            <Heading>some text</Heading>
+            <Oscar>
+                <Heading>Oscar goes to Leonardo Dicaprio</Heading>
+            </Oscar>
+            <Greet name={'Vishwas'} messageCount={10} isLoggedIn={true}/>
+            {/*<Greet name={'Vishwas'} messageCount={20} isLoggedIn={false}/>*/}
+            {/*<Person name={personName}/>*/}
+            {/*<PersonList names={nameList}/>*/}
+        </div>
+    );
 }
 
 export default App;
