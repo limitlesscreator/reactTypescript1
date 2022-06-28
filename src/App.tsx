@@ -9,6 +9,7 @@ import {Oscar} from "./components/Oscar";
 import {Button} from "./components/Button";
 import {Input} from "./components/Input";
 import {Container} from "./components/Container";
+import {Test1} from "./components/Test1";
 
 type NameListTypes = {
     first: string,
@@ -39,23 +40,24 @@ function App() {
 
     return (
         <div className="App">
-            <Status status={"loading"}/>
-            <Heading>some text</Heading>
-            <Oscar>
-                <Heading>Oscar goes to Leonardo Dicaprio</Heading>
-            </Oscar>
-            <Greet name={'Vishwas'} messageCount={10} isLoggedIn={true}/>
-            <Button handleClick={(event) => console.log(event.currentTarget.innerHTML)}/>
-            {/*<Button handleClick={() => console.log(7)}/>*/}
-            <Input value={value} handleOnChange={(event) => {
-                setValue(event.currentTarget.value)
-                console.log(event.currentTarget.value)
-            }}/>
+            {/*<Status status={"loading"}/>*/}
+            {/*<Heading>some text</Heading>*/}
+            {/*<Oscar>*/}
+            {/*    <Heading>Oscar goes to Leonardo Dicaprio</Heading>*/}
+            {/*</Oscar>*/}
+            {/*<Greet name={'Vishwas'} messageCount={10} isLoggedIn={true}/>*/}
+            {/*<Button handleClick={(event) => console.log(event.currentTarget.innerHTML)}/>*/}
+            {/*/!*<Button handleClick={() => console.log(7)}/>*!/*/}
+            {/*<Input value={value} handleOnChange={(event) => {*/}
+            {/*    setValue(event.currentTarget.value)*/}
+            {/*    console.log(event.currentTarget.value)*/}
+            {/*}}/>*/}
 
-            <Container styles={{color: 'red'}}/>
+            {/*<Container styles={{color: 'red'}}/>*/}
             {/*<Greet name={'Vishwas'} messageCount={20} isLoggedIn={false}/>*/}
             {/*<Person name={personName}/>*/}
             {/*<PersonList names={nameList}/>*/}
+            <Test1/>
         </div>
     );
 }
